@@ -25,7 +25,7 @@ public class DataGenerators{
     /*     server     */
     boolean isIncludeServer = event.includeServer();
     generator.addProvider(isIncludeServer, new ModRecipes(generator, event.getLookupProvider()));
-    generator.addProvider(event.includeServer(), new ModLootTableProvider(generator.getPackOutput(), Collections.emptySet(), List.of(
+    generator.addProvider(isIncludeServer, new ModLootTableProvider(generator.getPackOutput(), Collections.emptySet(), List.of(
             new LootTableProvider.SubProviderEntry(ModBlockLootTables::new, LootContextParamSets.BLOCK)
     ), event.getLookupProvider()));
 

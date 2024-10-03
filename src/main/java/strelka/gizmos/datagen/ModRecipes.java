@@ -76,11 +76,6 @@ public class ModRecipes extends RecipeProvider{
             .define('e', Tags.Items.ENDER_PEARLS)
             .unlockedBy("has_brain", has(ModItems.ROTTEN_BRAIN.get()))
             .save(pRecipeOutput);
-
-
-        ImmutableList<ItemLike> exampliteSmeltables = ImmutableList.of(Items.IRON_ORE, Items.DEEPSLATE_IRON_ORE, Items.RAW_IRON);
-        oreSmelting(pRecipeOutput, exampliteSmeltables, RecipeCategory.MISC, ModItems.EXAMPLITE_INGOT, 0.7F, 200, "examplite_ingot");
-        oreBlasting(pRecipeOutput, exampliteSmeltables, RecipeCategory.MISC, ModItems.EXAMPLITE_INGOT, 0.7F, 100, "examplite_ingot");
     }
 }
 
